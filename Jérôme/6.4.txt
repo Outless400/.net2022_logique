@@ -1,0 +1,34 @@
+debut 6.4
+
+variables locales :
+var source : T <- ""
+var result : T <- ""
+var pos1 : N <- 0
+var pos2 : N <- 0
+var comptPos : N <- 0
+
+
+fin variables locales
+
+
+afficher "texte source"
+saisir source
+afficher "position de depart"
+saisir pos1
+afficher "position de fin"
+saisir pos2
+
+comptPos <- pos1
+
+si pos 2 > longueur (source) + 1 et pos1 > 0 et pos2 > pos1
+	alors
+		Tant que comptPos < pos2
+				result <- result (+) caract ( source, comptPos)
+				comptPos +1
+		fin tant que
+	sinon 
+		afficher " position non valide "
+finsi
+		
+fin 6.4
+
